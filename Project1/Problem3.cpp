@@ -29,6 +29,7 @@ void inputRainfall(int rainFall[], int size){
         month++;// increment the month
         
     }
+    inputFile.close();//close the file
     
 }
 
