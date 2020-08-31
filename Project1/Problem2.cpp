@@ -1,6 +1,5 @@
 //Nhan Vo And Ian Lee
 // CECS 282 LAB 1-Problem 2
-#include <stdio.h>
 #include<iostream>
 using namespace std;
 /*
@@ -10,13 +9,23 @@ if the char in the string is not 0, add to sum
 implement the power.
 */
 int bin2Dec(const string& binaryString){
-    int power=1,sum=0;
-    for(int i=binaryString.length()-1;i>-1;i--){
-        if(binaryString[i]!='0'){
-            sum+=power;
+    
+    int power=1;
+    int sum=0;
+    
+    //Iterate through the binary string
+    for(int i=binaryString.length()-1;i>-1;i--){// Start from the right most of the binary string
+    
+        if(binaryString[i]!='0'){//If the binary string character is not 0
+        
+            sum+=power;// start increment into sum
+            
         }
-        power*=2;
+        
+        power*=2;// increment power by the factor of 2
+        
     }
+    
     return sum;
     
 }
@@ -27,12 +36,20 @@ output the result.
 */
 int main()
 {
-    string input;
+    string input;//Initialize the user's input holder
+    
     cout<<"Please enter your binary number"<<endl;
-    cin>>input;
-    cout<<"Binary Conversion: "<<bin2Dec(input)<<endl;
+    
+    cin>>input;//store the input
+    
+    cout<<"Binary Conversion: "<<bin2Dec(input)<<endl;// call bin2Dec function and output result.
+    
     return 0;
 }
+
+
+
+
 
 
 
