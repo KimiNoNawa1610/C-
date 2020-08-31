@@ -1,10 +1,14 @@
 //Nhan Vo and Ian Lee
 // CECS 282 LAB 1-Problem 3
-#include <stdio.h>
+#include <cmath>
 #include<iostream>
 #include<fstream>
 #include <iomanip>
 using namespace std;
+/*
+inputRainfall function:
+The function reads the monthly rainfall from the file rainFall.txt and stores them in the array rainFall
+*/
 void inputRainfall(int rainFall[], int size){
     
     //Open the file
@@ -18,22 +22,30 @@ void inputRainfall(int rainFall[], int size){
     //Read the monthly rainfall in the file
     while(size!=0){
         
-        size--;
+        size--;// decrement the size of 
         
-        inputFile >> rainFall[month];
+        inputFile >> rainFall[month];// store the number from file into the array 
         
-        month++;
+        month++;// increment the month
         
     }
     
 }
 
+/*
+calculateAverageRainFall function:
+Return the average monthly rainfall (rounded to the nearest millimeter).
+*/
+
 int calculateAverageRainFall(int rainFall[],int size){
     
-    int i=0,temp=size;
+    int i=0;
+    int temp=size;
+    double sum;
+    double ave=0.0;
     
-    float ave=0.0,sum=0.0,diff=0.5;
     
+    //Find the sum of the total rain fall
     while(temp!=0){
         
         temp--;
@@ -44,41 +56,48 @@ int calculateAverageRainFall(int rainFall[],int size){
         
     }
     
-    ave=sum/size;
+    ave=sum/size;// Divide the sum by the 
     
-    ave=ave+diff;//rounding the average rain fall;
-    
-    return int(ave);
+    return int(round(ave));
     
 }
 
-
+/*
+classifyAndDisplayRainfall function:
+Display the average monthly rainfall, the month with the highest rainfall, and the month with the lowest rainfall.
+Also classify each month as average, rainy, or dry.
+*/
 
 void classifyAndDisplayRainfall(int rainFall[], int months){
-    
+    //Create the string array monthsName 
     string monthsName[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     
-    string Classification[12];
+    string Classification[12];//Initialize the Classification (drainy or dry or neither) 
+    int diff=1;
+    int min;
+    int max;
+    int maxMonth;
+    int minMonth;
     
-    int min, max,maxMonth,minMonth, ave=calculateAverageRainFall(rainFall,months);
+    double ave=calculateAverageRainFall(rainFall,months);
     
-    max=min=rainFall[0];
+    max=min=rainFall[0];// Initialize min and max rain fall value
     
-    minMonth=maxMonth=0;
+    minMonth=maxMonth=0;// Initialize the min and max rain fall months
     
     for(int i=0;i<months;i++){
         
-       if(rainFall[i]<min){
+       if(rainFall[i]<min){// find min rain fall month
            min=rainFall[i];
            minMonth=i;
        } 
        
-       else if(rainFall[i]>max){
+       else if(rainFall[i]>max){// find max rain fall month
            max=rainFall[i];
            maxMonth=i;
        }
        
-       if(rainFall[i]<(ave*0.75)){
+       if(rainFall[i]<(ave*0.75)){// categorize each month as dry, rainy or average
            Classification[i]="Dry";
        }
        
@@ -91,32 +110,38 @@ void classifyAndDisplayRainfall(int rainFall[], int months){
        }
        
     }
+    // Out put the value
+    cout<<"The year's average monthly rainfall was "<<ave<<" mm."<<endl;// Average rain fall in a year
     
-    cout<<"The year's average monthly rainfall was "<<ave<<" mm."<<endl;
+    cout<<monthsName[maxMonth]<<" has the highest rainfall ("<<max<<" mm)."<<endl;// highest rain fall in a year
     
-    cout<<monthsName[maxMonth]<<" has the highest rainfall ("<<max<<" mm)."<<endl;
-    
-    cout<<monthsName[minMonth]<<" has the lowest rainfall ("<<min<<" mm)."<<endl;
+    cout<<monthsName[minMonth]<<" has the lowest rainfall ("<<min<<" mm)."<<endl;// lowest rain fall in a year
     
     cout<<endl;
     
-    cout<<"Month"<<setw(20)<<"Rainfall(mm)"<<setw(20)<<"Classification"<<endl;
+    cout<<"Month"<<setw(20)<<"Rainfall(mm)"<<setw(20)<<"Classification"<<endl;// Output rain fall table for each month.
     
     cout<<"-----"<<setw(20)<<"------------"<<setw(20)<<"--------------"<<endl;
     
     for(int i=0;i<months;i++){
-        
-        cout<<setw(2)<<i+1<<setw(18)<<rainFall[i]<<setw(20)<<Classification[i]<<endl;
+        // output rainfall for each month
+        cout<<setw(2)<<i+diff<<setw(18)<<rainFall[i]<<setw(20)<<Classification[i]<<endl;
         
     }
     
 }
 
+/*
+Driver:
+Create an array to store the value from input file
+Call for the classifyAndDisplayRainfall and output the result.
+*/
+
 int main()
 {
     int rainFall[12];
     
-    int n=sizeof(rainFall)/sizeof(rainFall[0]);
+    int n=sizeof(rainFall)/sizeof(rainFall[0]);// Size of the array
     
     inputRainfall(rainFall,n);
     
