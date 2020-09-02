@@ -12,6 +12,7 @@ int bin2Dec(const string& binaryString){
     
     int power=1;
     int sum=0;
+    int factor=2;
     
     //Iterate through the binary string
     for(int i=binaryString.length()-1;i>-1;i--){// Start from the right most of the binary string
@@ -22,7 +23,7 @@ int bin2Dec(const string& binaryString){
             
         }
         
-        power*=2;// increment power by the factor of 2
+        power*=factor;// increment power by the factor of 2
         
     }
     
