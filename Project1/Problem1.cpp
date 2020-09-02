@@ -11,14 +11,17 @@ int OddCalculation(int x){
     
     int temp=0;
     int sum=0;
+    int factor=2;
+    int decimal=10;
+    
     
     while(x>0){
         
-        temp=x%10;// seperate each number in x
+        temp=x%decimal;// seperate each number in x
         
-        x=x/10;// remove the seperated number
+        x=x/decimal;// remove the seperated number
         
-        if(temp%2!=0){
+        if(temp%factor!=0){
             
             sum+=temp;// If the seperated number is odd, add to sum
             
