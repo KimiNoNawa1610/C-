@@ -59,7 +59,7 @@ int calculateAverageRainFall(int rainFall[],int size){
     
     ave=sum/size;// Divide the sum by the 
     
-    return int(round(ave));
+    return int(round(ave));// round the average
     
 }
 
@@ -80,6 +80,9 @@ void classifyAndDisplayRainfall(int rainFall[], int months){
     int maxMonth;
     int minMonth;
     
+    float dry=0.75;
+    float rainy=1.2;
+    
     double ave=calculateAverageRainFall(rainFall,months);
     
     max=min=rainFall[0];// Initialize min and max rain fall value
@@ -98,11 +101,11 @@ void classifyAndDisplayRainfall(int rainFall[], int months){
            maxMonth=i;
        }
        
-       if(rainFall[i]<(ave*0.75)){// categorize each month as dry, rainy or average
+       if(rainFall[i]<(ave*dry)){// categorize each month as dry, rainy or average
            Classification[i]="Dry";
        }
        
-       else if(rainFall[i]>(ave*1.2)){
+       else if(rainFall[i]>(ave*rainy)){
            Classification[i]="Rainy";
        }
        
@@ -140,13 +143,13 @@ Call for the classifyAndDisplayRainfall and output the result.
 
 int main()
 {
-    int rainFall[12];
+    int months=12;// 12 months 
     
-    int n=sizeof(rainFall)/sizeof(rainFall[0]);// Size of the array
+    int rainFall[months];
     
-    inputRainfall(rainFall,n);
+    inputRainfall(rainFall,months);// call inputRainfall to store rainfall data
     
-    classifyAndDisplayRainfall(rainFall,n);
+    classifyAndDisplayRainfall(rainFall,months);//Call classifyAndDisplayRainfall function
     
     return 0;
 }
