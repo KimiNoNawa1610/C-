@@ -1,13 +1,12 @@
-﻿  Account.cpp
-D:\CECS-282\Project2\Account.cpp(16,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Bank.cpp
+﻿  Bank.cpp
 D:\CECS-282\Project2\Bank.cpp(28,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(31,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(29,18): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(34,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\CECS-282\Project2\Bank.cpp(37,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(40,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(46,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(48,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(52,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\CECS-282\Project2\Bank.cpp(54,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
+D:\CECS-282\Project2\Bank.cpp(43,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(46,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(52,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(54,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(58,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project2\Bank.cpp(60,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Project2.vcxproj -> D:\CECS-282\Project2\Debug\Project2.exe
