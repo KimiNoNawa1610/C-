@@ -2,45 +2,40 @@
 *Nhan Vo & Ian Lee
 * Lab2- Problem 3
 */
-
 #include <iostream>
 using namespace std;
 #include "Account.h"
 
-
+//Construct an empty account
 Account::Account() {
     balance = 0;
 }
-
-Account::Account(int balance) {
+//Construct a account with balance
+Account::Account(double balance) {
     this->balance = balance;
 }
-
-int Account::deposit(int amount) {
+//Deposit into the account
+void Account::deposit(double amount) {
     balance += amount;
-    return 0;
 }
-
-int Account::withdraw(int amount) {
+//Withdraw from account
+void Account::withdraw(double amount) {
+    // if the account has enough money to perform withdraw
+    //then withdraw amount
     if (amount <= balance) {
         balance -= amount;
-        return 0;
     }
-
+    //else -5 from that account
     else if ((amount > balance) && (balance > 5)) {
         balance -= 5;
-        return 0;
     }
-
-    return 0;
 }
-
-float Account::get_balance() {
+// return balance value
+double Account::get_balance() {
     return balance;
 }
-
-int Account::add_interest(float rate) {
+// Add interest to balance
+void Account::add_interest(float rate) {
     balance *= (1 + rate / 100);
-    return 0;
 }
 
