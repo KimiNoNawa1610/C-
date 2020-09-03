@@ -1,7 +1,4 @@
-﻿  Account.cpp
-D:\CECS-282\Project2\Account.cpp(11,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Bank.cpp
+﻿  Bank.cpp
 D:\CECS-282\Project2\Bank.cpp(24,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\CECS-282\Project2\Bank.cpp(27,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
   Project2.vcxproj -> D:\CECS-282\Project2\Debug\Project2.exe
