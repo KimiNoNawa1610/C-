@@ -2,7 +2,6 @@
 *Nhan Vo & Ian Lee
 * Lab2- Problem 3
 */
-
 #include <iostream>
 using namespace std;
 #include "Account.h"
