@@ -1,3 +1,6 @@
+/*
+*Nhan Vo & Ian Lee
+*/
 #pragma once
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
