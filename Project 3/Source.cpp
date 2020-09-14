@@ -45,6 +45,38 @@ void writeToConsole(int* arr, int last) {
     }
 }
 
+bool isGreater(int a, int b) {
+    if (a > b) {
+        return true;
+    }
+    return false;
+}
+
+bool isLess(int a, int b) {
+    if (a < b) {
+        return true;
+    }
+    return false;
+}
+
+void bubble_sort(int* array, int size, bool(*hold)(int, int)) {
+    bool isSorted = 0;
+    while (!isSorted) {
+        isSorted = 1;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                bool cond = (*hold)(*(array + i), *(array + j));
+                if (cond==true) {
+                    int temp = *(array + i);
+                    *(array + i) = *(array + j);
+                    *(array + j) = temp;
+                    isSorted = 0;
+                }
+            }
+        }
+    }
+}
+
 int main() {
 
     int* arr;
@@ -52,6 +84,22 @@ int main() {
     int n;
 
     n = readData(arr);
+
+    bubble_sort(arr, n, isLess);
+    //print the sorted array
+    cout << "Array sorted in ascending order" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << *(arr + i) << " ";
+    }
+    cout << endl;
+
+    cout << "Array sorted in decending order" << endl;
+    //call bubble_sort to sort the array
+    //pass compare_desc pointer to sort the array in decending order
+    bubble_sort(arr, n, isGreater);
+    for (int i = 0; i < n; i++) {
+        cout << *(arr + i) << " ";
+    }
 
     return 0;
 }
