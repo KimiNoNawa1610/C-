@@ -1,6 +1,6 @@
 /*
 *Nhan Vo & Ian Lee
-* Lab2- Problem 3
+* Lab2- Problem 1,2
 */
 
 #include <iostream>
@@ -37,6 +37,7 @@ double Account::get_balance() {
 }
 // Add interest to balance
 void Account::add_interest(float rate) {
+    // rate is monthly interest rate
     balance *= (1 + rate / 100);
 }
 
