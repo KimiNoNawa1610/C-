@@ -1,0 +1,2 @@
+D:\CECS-282\Big Project\Debug\Big Project.exe
+D:\CECS-282\Big Project\Debug\Big Project.pdb

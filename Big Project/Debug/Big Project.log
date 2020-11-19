@@ -1,0 +1,9 @@
+﻿  Employee.cpp
+D:\CECS-282\Big Project\Faculty.h(21,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\CECS-282\Big Project\Faculty.h(22,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Faculty.cpp
+D:\CECS-282\Big Project\Faculty.h(21,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\CECS-282\Big Project\Faculty.h(22,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
+D:\CECS-282\Big Project\Employee.cpp(58): warning C4715: 'Employee::getSex': not all control paths return a value
+  Big Project.vcxproj -> D:\CECS-282\Big Project\Debug\Big Project.exe
