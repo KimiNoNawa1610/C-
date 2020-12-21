@@ -111,8 +111,16 @@ employee_type Employee::get_type() {
 		return parttime;
 	else
 	{
-		cerr << "\nBad employee type"; exit(1);
+		cerr << "\nBad employee type"; 
+		exit(1);
 	}
+}
+
+void Employee::setVector(vector<Employee*> const& emp){
+	for (int i = 0; i < emp.size();i++) {
+		employees[n++] = emp[i];
+	}
+	
 }
 
 void Employee::add() {

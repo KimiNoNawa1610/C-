@@ -1,9 +1,16 @@
 ﻿  Employee.cpp
 D:\CECS-282\Big Project\Faculty.h(21,15): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\CECS-282\Big Project\Faculty.h(22,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\CECS-282\Big Project\Employee.cpp(119,20): warning C4018: '<': signed/unsigned mismatch
   Faculty.cpp
 D:\CECS-282\Big Project\Faculty.h(21,15): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\CECS-282\Big Project\Faculty.h(22,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Parttime.cpp
+  Source.cpp
+D:\CECS-282\Big Project\Faculty.h(21,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\CECS-282\Big Project\Faculty.h(22,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\CECS-282\Big Project\Source.cpp(16,9): warning C4101: 'n': unreferenced local variable
+  Staff.cpp
   Generating Code...
 D:\CECS-282\Big Project\Employee.cpp(58): warning C4715: 'Employee::getSex': not all control paths return a value
   Big Project.vcxproj -> D:\CECS-282\Big Project\Debug\Big Project.exe

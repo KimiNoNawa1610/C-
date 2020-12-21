@@ -62,6 +62,8 @@ public:
 
 	static void write();    //write to disk file
 
+	static void setVector(vector<Employee*> const &emp);// initialize vector
+
 };
 
 #endif // !EMPLOYEE_H

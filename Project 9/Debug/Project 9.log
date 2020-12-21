@@ -1,0 +1,8 @@
+﻿  Distance.cpp
+D:\CECS-282\Project 9\Distance.cpp(24,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\CECS-282\Project 9\Distance.cpp(39,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Time12.cpp
+  main.cpp
+  time24.cpp
+  Generating Code...
+  Project 9.vcxproj -> D:\CECS-282\Project 9\Debug\Project 9.exe

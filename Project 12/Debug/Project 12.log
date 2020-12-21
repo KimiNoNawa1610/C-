@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\CECS-282\Project 12\Source.cpp(22,18): warning C4018: '<': signed/unsigned mismatch
+D:\CECS-282\Project 12\Source.cpp(68): message : see reference to function template instantiation 'int ReadInput<int>(const std::string &,std::vector<int,std::allocator<int>> &)' being compiled
+  Project 12.vcxproj -> D:\CECS-282\Project 12\Debug\Project 12.exe
